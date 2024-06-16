@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F8F9FB;
+}
+#header-txt {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-size: x-small;
+  font-weight: 700;
+}
+.cta {
+    background-color: #DE5547;
+    width: 200px;
+    height: 60px; 
+}
+.first-section {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+   
+}
+.gradient-txt{
+    /* Special Pricing Plan Available */
+
+background: linear-gradient(90.46deg, #E73239 0.01%, #013D84 101.72%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
+}
+.form-style{
+
+/* First Name */
+ background-color: grey;
+  padding-left:25px ;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  background-color: #EEEEEE;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 10px;
+  font-size: 13px;
+
+
+}
