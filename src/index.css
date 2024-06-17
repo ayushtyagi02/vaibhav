@@ -52,4 +52,65 @@ text-fill-color: transparent;
   font-size: 13px;
 
 
+}body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: calc(100% * 12 / 3); /* Adjust this based on the number of slides and how many to show at a time */
+  animation: slide 30s linear infinite; /* Adjust the duration to control the speed */
+}
+
+.slide {
+  min-width: calc(100% / 12); /* Adjust this based on the number of slides */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: auto;
+  height: 100px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-75%); } /* Adjust this based on the number of slides */
+}
+
+/* Gradient overlay for fading effect */
+.slider::before,
+.slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  pointer-events: none;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(229, 231, 235), rgba(255, 255, 255, 0));
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(229, 231, 235,1), rgba(255, 255, 255, 0));
+}
+.second-sec{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
 }

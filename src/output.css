@@ -562,28 +562,8 @@ video {
   position: relative;
 }
 
-.right-0 {
-  right: 0px;
-}
-
-.bottom-8 {
-  bottom: 2rem;
-}
-
 .bottom-5 {
   bottom: 1.25rem;
-}
-
-.right-3 {
-  right: 0.75rem;
-}
-
-.right-6 {
-  right: 1.5rem;
-}
-
-.right-10 {
-  right: 2.5rem;
 }
 
 .right-12 {
@@ -603,6 +583,10 @@ video {
   margin-left: 3rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -611,28 +595,24 @@ video {
   margin-top: 2rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .flex {
   display: flex;
+}
+
+.h-16 {
+  height: 4rem;
 }
 
 .h-\[109px\] {
   height: 109px;
 }
 
-.h-\[462px\] {
-  height: 462px;
+.h-\[330px\] {
+  height: 330px;
+}
+
+.h-\[472px\] {
+  height: 472px;
 }
 
 .h-\[600px\] {
@@ -647,12 +627,16 @@ video {
   height: 93px;
 }
 
-.h-\[472px\] {
-  height: 472px;
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-10\/12 {
   width: 83.333333%;
+}
+
+.w-\[1\.6px\] {
+  width: 1.6px;
 }
 
 .w-\[231px\] {
@@ -661,6 +645,10 @@ video {
 
 .w-\[262px\] {
   width: 262px;
+}
+
+.w-\[2px\] {
+  width: 2px;
 }
 
 .w-\[447px\] {
@@ -679,20 +667,20 @@ video {
   width: 100%;
 }
 
-.w-\[20\%\] {
-  width: 20%;
+.w-7 {
+  width: 1.75rem;
 }
 
-.w-\[10\%\] {
-  width: 10%;
+.w-4 {
+  width: 1rem;
 }
 
-.w-\[\] {
-  width: ;
+.w-3 {
+  width: 0.75rem;
 }
 
-.w-\[3rem\] {
-  width: 3rem;
+.w-8 {
+  width: 2rem;
 }
 
 .flex-col {
@@ -701,6 +689,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -713,6 +705,15 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
 }
 
 .gap-y-2 {
@@ -731,17 +732,46 @@ video {
   border-bottom-width: 2px;
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-yellow-300 {
+  --tw-gradient-from: #fde047 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(253 224 71 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-black {
+  --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #000 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-yellow-300 {
+  --tw-gradient-to: #fde047 var(--tw-gradient-to-position);
 }
 
 .p-3 {
   padding: 0.75rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
+.text-center {
+  text-align: center;
 }
 
 .font-mono {
@@ -750,6 +780,21 @@ video {
 
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
 }
 
 .text-\[55px\] {
@@ -861,4 +906,78 @@ body{
   margin-right: 3rem;
   border-radius: 10px;
   font-size: 13px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: calc(100% * 12 / 3);
+  /* Adjust this based on the number of slides and how many to show at a time */
+  animation: slide 30s linear infinite;
+  /* Adjust the duration to control the speed */
+}
+
+.slide {
+  min-width: calc(100% / 12);
+  /* Adjust this based on the number of slides */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: auto;
+  height: 100px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-75%);
+  }
+
+  /* Adjust this based on the number of slides */
+}
+
+/* Gradient overlay for fading effect */
+
+.slider::before,
+.slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  pointer-events: none;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(229, 231, 235), rgba(255, 255, 255, 0));
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(229, 231, 235,1), rgba(255, 255, 255, 0));
+}
+
+.second-sec{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
